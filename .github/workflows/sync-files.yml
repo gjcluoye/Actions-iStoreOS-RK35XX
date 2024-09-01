@@ -5,7 +5,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: 55 15 * * *
-
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
 jobs:
   sync:
     runs-on: ubuntu-latest
