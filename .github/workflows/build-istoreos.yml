@@ -37,10 +37,11 @@ jobs:
           - rk35xx
         os:
           - ubuntu-22.04
-        include:
-          - REPO_BRANCH: istoreos-23.05
-            ARCHITECTURE: rk35xx
-            os: ubuntu-22.04
+#需要特殊处理，否则无法编译
+#        include:
+#          - REPO_BRANCH: istoreos-23.05
+#            ARCHITECTURE: rk35xx
+#            os: ubuntu-22.04
 
       fail-fast: false
 
