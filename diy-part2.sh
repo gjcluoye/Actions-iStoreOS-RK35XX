@@ -51,7 +51,7 @@ cp -a $GITHUB_WORKSPACE/configfiles/etc/* package/base-files/files/etc/
 
 
 
-#轮询检查ubus服务是否崩溃，崩溃就重启ubus服务
+#轮询检查ubus服务是否崩溃，崩溃就重启ubus服务，只针对rk3566机型，如黑豹X2和荐片TV盒子。
 cp -f $GITHUB_WORKSPACE/configfiles/httpubus package/base-files/files/etc/init.d/httpubus
 cp -f $GITHUB_WORKSPACE/configfiles/ubus-examine.sh package/base-files/files/bin/ubus-examine.sh
 chmod 755 package/base-files/files/etc/init.d/httpubus
@@ -59,7 +59,7 @@ chmod 755 package/base-files/files/bin/ubus-examine.sh
 
 
 
-#集成黑豹X2和荐片TV盒子无线功能并且开启无线功能
+#集成黑豹X2和荐片TV盒子WiFi驱动并且开启无线功能
 cp -a $GITHUB_WORKSPACE/configfiles/firmware/* package/firmware/
 cp -f $GITHUB_WORKSPACE/configfiles/opwifi package/base-files/files/etc/init.d/opwifi
 chmod 755 package/base-files/files/etc/init.d/opwifi
